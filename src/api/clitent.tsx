@@ -6,7 +6,7 @@ const getData = async (keyword: string) => {
     const cachedResponse = await cacheStorage.match(keyword);
     if (!cachedResponse) {
       console.info('calling api');
-      const response = await axios.get(`http://localhost:4000/sick?q=${keyword}`)
+      const response = await axios.get(`http://localhost:4000/sick?q=${keyword}`);
       const store = response.data;
       cacheStorage.put(keyword, new Response(JSON.stringify(store)));
       return store;
