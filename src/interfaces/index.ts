@@ -1,4 +1,4 @@
 export interface ISickData {
-    sickCd : string;
-    sickNm : string
+  sickCd: string;
+  sickNm: string;
 }
