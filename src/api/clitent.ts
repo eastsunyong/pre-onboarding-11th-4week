@@ -5,13 +5,18 @@ const getData = async (keyword: string) => {
     const cacheStorage = await caches.open('sick');
     const cachedResponse = await cacheStorage.match(keyword);
     if (!cachedResponse) {
-      const response = await axios.get(`http://localhost:4000/sick?q=${keyword}`);
-      console.info('calling api');
-      const store = response.data;
-      cacheStorage.put(keyword, new Response(JSON.stringify(store)));
-      return store;
+      try {
+        const response = await axios.get(`http://localhost:4000/sick?q=${keyword}`);
+        console.info('calling api');
+        const store = response.data;
+        cacheStorage.put(keyword, new Response(JSON.stringify(store)));
+        return store;
+      } catch (err) {
+        return console.log(err);
+      }
     }
     const cached = await cachedResponse?.json();
+
     return cached;
   }
   return [];
