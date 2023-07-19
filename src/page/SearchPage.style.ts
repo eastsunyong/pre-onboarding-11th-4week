@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 200px;
+  margin-top: 40px;
 `;
 
 export const Input = styled.input`
@@ -24,6 +24,7 @@ export const SickBox = styled.div`
   height: 100%;
   width: 440px;
   box-shadow: 0px 2px 8px rgba(17, 24, 39, 0.25);
+  background-color: #fff;
 `;
 
 export const Ul = styled.ul`
@@ -31,6 +32,7 @@ export const Ul = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 `;
 
 export const Li = styled.li<{ isFocus?: boolean }>`
