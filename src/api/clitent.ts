@@ -5,8 +5,8 @@ const getData = async (keyword: string) => {
     const cacheStorage = await caches.open('sick');
     const cachedResponse = await cacheStorage.match(keyword);
     if (!cachedResponse) {
-      console.info('calling api');
       const response = await axios.get(`http://localhost:4000/sick?q=${keyword}`);
+      console.info('calling api');
       const store = response.data;
       cacheStorage.put(keyword, new Response(JSON.stringify(store)));
       return store;
