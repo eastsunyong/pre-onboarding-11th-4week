@@ -7,4 +7,5 @@ export const Container = styled.div`
   height: 40px;
   width: 440px;
   box-shadow: 0px 2px 8px rgba(17, 24, 39, 0.25);
+  background-color: #fff;
 `;
