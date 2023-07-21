@@ -61,7 +61,7 @@
 
 ## API 캐싱
 
-window에 있는 cacheStorage 를 사용해 중복 api 호출을 방지했습니다
+브라우저에 있는 cacheStorage 를 사용해 중복 api 호출을 방지했습니다
 - api 요청을 할 경우 그 값을 cacheStorage 에 추가 한 후 추후에 같은 요청일 경우 네트워크 통신이 아닌 cacheStorage에 저장돼 있던 값을 불러오게 하였습니다
 
 `api/client`
